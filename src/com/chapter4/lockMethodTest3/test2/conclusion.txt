@@ -1,0 +1,3 @@
+ReentrantLock的方法
+方法boolean isHeldByCurrentThread()的作用是查询当前线程是否保持此锁定
+

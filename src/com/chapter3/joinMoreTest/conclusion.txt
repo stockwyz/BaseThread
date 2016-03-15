@@ -1,0 +1,45 @@
+A线程引用B线程,获取B的锁后,执行5秒. B线程的run方法要获取线程B的锁,执行5秒. 主线程调用线程b的join（2000）方法,取要获取线程b的锁
+综上所述，三个线程都要获取线程B实例b的锁.
+执行情况：
+1.情况1
+begin A ThreadName=Thread-1  1456562219017
+  end A ThreadName=Thread-1  1456562224019
+                    main end 1456562224019
+begin B ThreadName=Thread-0  1456562224019
+  end B ThreadName=Thread-0  1456562229019
+  
+1）b.join（2000）方法先抢到B锁，然后将B锁进行释放；
+2）ThreadA抢到锁，打印ThreadA begin并且sleep（5000）；
+3）ThreadA打印ThreadA end，并释放锁；
+4）这时join（2000）和ThreadB争抢锁，而join（2000）再次抢到锁，发现时间已过，释放锁后打印main end；
+5）ThreadB抢到锁打印ThreadB begin；
+6）5秒之后再打印ThreadB end。
+
+2.情况2
+begin A ThreadName=Thread-1  1456562219017
+  end A ThreadName=Thread-1  1456562224019
+begin B ThreadName=Thread-0  1456562224019
+  end B ThreadName=Thread-0  1456562229019
+                    main end 1456562224019
+                    
+1）b.join（2000）方法先抢到B锁，然后将B锁进行释放；
+2）ThreadA抢到锁，打印ThreadA begin并且sleep（5000）；
+3）ThreadA打印ThreadA end，并释放锁；
+4）这时join（2000）和ThreadB争抢锁，而ThreadB抢到锁后执行sleep（5000）后释放锁；
+5）join（2000）最后抢到锁，发现时间已过，释放锁后打印main end。 
+
+3.情况3
+begin A ThreadName=Thread-1  1456562219017
+  end A ThreadName=Thread-1  1456562224019
+begin B ThreadName=Thread-0  1456562224019
+                    main end 1456562224019 
+  end B ThreadName=Thread-0  1456562229019
+  
+1）b.join（2000）方法先抢到B锁，然后将B锁进行释放；
+2）ThreadA抢到锁，打印ThreadA begin并且sleep（5000）；
+3）ThreadA打印ThreadA end，并释放锁；
+4）这时join（2000）和ThreadB争抢锁，而join（2000）再次抢到锁，发现时间已过，释放锁，些时还未来得及打印main end；
+5）ThreadB抢到锁打印ThreadB begin；
+6）这时main end也异步输出；
+7）5秒之后再打印ThreadB end。
+                    

@@ -1,0 +1,2 @@
+wait(long X) X(ms)后若没有线程调用该对象锁的notify或notifyAll方法,则当前wait线程自动唤醒.
+

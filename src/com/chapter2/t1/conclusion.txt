@@ -1,0 +1,3 @@
+结论:
+多线程访问HasSelfPrivateNum一个实例的addI方法,由于num是方法内部变量,故线程安全.
+

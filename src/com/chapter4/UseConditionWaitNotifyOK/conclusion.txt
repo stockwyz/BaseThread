@@ -1,0 +1,6 @@
+ReentrantLock中的Condition上调用await跟调用线程wait方法一样;调用Condition上的signal跟调用notify一样
+
+Lock:await  =  Thread:wait
+Lock:await(long, TimeUnit) = Thread:wait(long)
+Lock:signal =  Thread:notify
+Lock:signalAll = Thread:notifyAll

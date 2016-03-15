@@ -1,0 +1,1 @@
+ReentrantLock的Condition上调用方法awaitUninterruptibly是不可以被thread.interrupt方法唤醒的

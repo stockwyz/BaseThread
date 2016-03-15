@@ -1,0 +1,2 @@
+虽然调用了MyThread方法的interrupt方法，但MyThread线程中的run方法是一个大循环中不停的执行,没有任何wait或sleep方法,
+故interrupt方法无法让MyThread线程从wait或sleep方法中抛出异常中止当前线程的执行

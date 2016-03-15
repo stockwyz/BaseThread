@@ -1,0 +1,3 @@
+本工程是用ReentrantLock的构造函数中传true, false来实现公平与非公平锁。
+公平锁即先到先得。
+

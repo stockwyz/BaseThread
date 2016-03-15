@@ -1,0 +1,2 @@
+通过对ReentrantLock创建多个Condition,不同线程调用不同Condition上的await方法等待,在不同的条件下调用不同Condition的signal方法,达到不同
+条件唤醒不同线程的目的

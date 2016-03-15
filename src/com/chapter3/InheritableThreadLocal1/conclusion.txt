@@ -1,0 +1,10 @@
+InheritableThreadLocal通过覆写initialValue提供了初始值：
+1.主线程 (创建线程)先从InheritableThreadLocal中取值,子线程(被创建线程)再从InheritableThreadLocal中取值，发现
+  initialValue只在主线程取值时调用了一次并缓存,子线程再取值时会用到被缓存的主线程的值.如Run.java
+
+2.让子线程先从InheritableThreadLocal中取值,主线程再从InheritableThreadLocal中取值.子线程会调用initialValue取一个值,
+     主线程会再调用一次initialValue取到另一值.两个线程取到的值不一样.如Run1.java
+     
+3.主线程 (创建线程)先从InheritableThreadLocal中取值,子线程(被创建线程)再从InheritableThreadLocal中取值，发现
+  initialValue只在主线程取值时调用了一次并缓存,子线程再取值时会用到被缓存的主线程的值.如果主线程改变InheritableThreadLoal中的值后,
+  子线程再从InheritableThreadLocal中取值,此时取到的还是主线程第一次得到的初始值.如Run2.java

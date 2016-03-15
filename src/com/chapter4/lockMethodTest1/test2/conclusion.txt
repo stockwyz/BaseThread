@@ -1,0 +1,2 @@
+ReentrantLock的方法int getQueueLength()的作用是返回正等待获取此锁定的线程估计数
+

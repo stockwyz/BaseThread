@@ -1,0 +1,1 @@
+ReentrantLock方法boolean isLocked()的作用是查询此锁定是否由任意线程保持

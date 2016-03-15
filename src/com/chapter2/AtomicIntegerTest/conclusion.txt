@@ -1,0 +1,5 @@
+结论:
+1.AddCountThread的一个实例被五个线程引用，AtomicInteger类型的成员变量被共享
+2.AddCoutThread类的run方法中的循环变量i是在每个线程内部栈中计数，互不影响。五个
+     线程共完成了50000次对同一成员变量AtomicInteger的同步读取及累加
+AtomicInteger是线程安全的.

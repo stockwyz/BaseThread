@@ -1,0 +1,1 @@
+继承ThreadLocal类,覆写initialValue函数,为ThreadLocal子类指定初使值.当线程第一次调用子ThreadLocal的get方法时不再返回空值

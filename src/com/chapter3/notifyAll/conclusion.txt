@@ -1,0 +1,2 @@
+notify通知,只会随机唤醒一个wait状态的线程,要想唤醒所有wait状态的线程,要调用notifyAll
+

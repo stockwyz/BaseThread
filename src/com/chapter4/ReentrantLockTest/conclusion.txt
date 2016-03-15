@@ -1,0 +1,1 @@
+ReentrantLock中的lock与unlock 和 synchronized关键字一样,对线程有同步互斥作用

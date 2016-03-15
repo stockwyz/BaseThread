@@ -1,0 +1,1 @@
+ThreadA和ThreadB两个线程都向一个ThreadLocal实例中存入值,但两个线程所存入的值是隔离的，互不干扰

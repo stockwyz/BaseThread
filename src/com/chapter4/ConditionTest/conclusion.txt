@@ -1,0 +1,4 @@
+本工程是用ReentrantLock实现的生产者与消费者一对一模式
+关键点:
+1.await外围判断不是if而是while,唤醒后while可以重复检测临界条件
+2.signal完成生产者与消费者互相通知,一对一模式。如果不是一对一模式,signal要改成signalAll避免假死的现象

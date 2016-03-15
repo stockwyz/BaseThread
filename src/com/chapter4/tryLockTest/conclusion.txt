@@ -1,0 +1,1 @@
+ReentrantLock方法boolean tryLock()的作用是，仅在调用时锁未被另一个线程保持的情况下，才获取该锁定。

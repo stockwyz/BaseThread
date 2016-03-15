@@ -1,0 +1,1 @@
+将对象锁的notify都改成notifyAll即可避免只唤醒同类线程

@@ -1,0 +1,3 @@
+ReentrantLock的方法int getHoldCount()的作用是查询当前线程保持此锁定的个数，也就是调用lock()方法的次数。
+当前线程调用lock获得锁后可重复调用lock方法,即可重入锁
+

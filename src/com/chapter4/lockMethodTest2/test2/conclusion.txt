@@ -1,0 +1,4 @@
+ReentrantLock的方法
+方法boolean hasWaiters（Condition condition）的作用是查询是否有线程正在等待与此锁定有关的condition条件
+方法int getWaitQueueLength（Condition condition）的作用是返回等待与此锁定相关的给定条件Condition的线程估计数
+

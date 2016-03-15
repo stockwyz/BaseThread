@@ -1,0 +1,3 @@
+Thread.currentThread()返回当前代码正在被哪个线程调用
+在线程中调用this，也是当前线程。
+但Thread.currentThread与this是不同的?????

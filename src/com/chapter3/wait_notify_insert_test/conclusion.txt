@@ -1,0 +1,12 @@
+本工程是多个生产者和多个消费者的变种
+DBTools中:
+   1.backupA与backupB都加了synchronized关键字,都是在DBTools某个实例加锁才执行,backupA与backupB互斥执行.
+   2.DBTools中backupA与backupB方法wait外围都加了while循环,当线程从wait被唤配执行后,都会再次检查互斥条件。如果用if，会造成线程(执行
+ backupA或backupB)唤醒同类(backupA或backupB)线程时,被唤醒的线程没有再次检查互斥条件而执行wait后面的业务逻辑。
+   3.DBTools中backupA与backupB方法的业务逻辑执行完成后都会调用notifyAll后能保证异类被唤醒，假死现象解决。当同类线程被唤醒后,由于wait外围
+ 套着while循环,会再次检查互斥条件,条件不满足,被唤醒的同类线程再次wait.只有异类被唤醒时再次检查互斥条件，不满足循环条件，则执行后续业务逻辑。
+ 
+ 总之,多生产者与多消费者线程需要
+ 1.将互斥条件检查的if条件改成while循环中判断
+ 2.将业务逻辑执行完成后的notify改成notifyAll
+ 则项目运行正常

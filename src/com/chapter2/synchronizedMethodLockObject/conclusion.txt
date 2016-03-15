@@ -1,0 +1,3 @@
+结论:
+1 A线程先持有object对象的Lock锁，B线程可以以异步的方式调用object对象中的非syn-chronized类型的方法
+2 A线程先持有object对象的Lock锁，B线程如果在这时调用object对象中的synchronized类型的方法则需等待，也就是同步

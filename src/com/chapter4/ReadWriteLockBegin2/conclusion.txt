@@ -1,0 +1,3 @@
+ReentrantReadWriteLock实例上调用writeLock().lock()方法,多个线程不可以重入读锁
+说明：
+ReentrantReadWriteLock锁写写排斥

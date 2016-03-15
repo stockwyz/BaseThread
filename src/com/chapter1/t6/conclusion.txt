@@ -1,0 +1,2 @@
+Thread.currentThread()返回当前代码正在被哪个线程调用
+

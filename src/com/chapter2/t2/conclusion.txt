@@ -1,0 +1,4 @@
+结论:
+多线程访问HasSelfPrivateNum一个实例的addI方法,由于num是成员变量,非线程安全.
+需要在addI方法前加synchronized关键字
+

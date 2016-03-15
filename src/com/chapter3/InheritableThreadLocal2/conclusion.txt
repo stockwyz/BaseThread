@@ -1,0 +1,3 @@
+InheritableThreadLocal通过覆写initialValue为主线程提供了初始值,通过覆写childValue提供了子线程的初始值.如Run.java
+
+

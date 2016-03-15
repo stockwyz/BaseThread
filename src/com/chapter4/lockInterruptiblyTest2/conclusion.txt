@@ -1,0 +1,1 @@
+线程在获取锁之前被调用了interrupt方法, 如果线程是用lockInterruptibly方法获取锁,线程会抛异常,不会取得lock锁

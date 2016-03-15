@@ -1,0 +1,1 @@
+ReentrantLock中的Condition上调用await跟调用线程wait方法一样,调用signal跟调用线程notify方法一样,必段获取对象锁

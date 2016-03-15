@@ -1,0 +1,6 @@
+线程B创建线程A后(长时间处理),join(wait),等待线程A执行完成。线程C则调用了b.interrupt方法,则线程B实例b从join(wait)方法抛出了
+InterruptException异常.线程c,b执行完成,而线程a还会一直执行很长时间.
+
+线程实例x调用join, wait, Thread.sleep后休眠,在线程实例x上调用interrupt方法,则线程实例x会从这个函数中抛出InterruptException异常
+并不再等待。
+

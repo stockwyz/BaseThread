@@ -1,0 +1,5 @@
+本工程是一生产者和多个消费者构成   
+   将MyStack中push操作和pop操作中if判断都改成while，将MyStack中push操作和pop操作中if判断改成while并且将notify改成notifyAll。
+新问题：
+   1.if改成while后不会报越界错误了,即无论生产者还是消费者从wait状态被唤醒后,再执行一遍list容器中元素个数的检查,不合条件再次wait
+   2.notifyAll后能保证异类被唤醒，假死现象解决

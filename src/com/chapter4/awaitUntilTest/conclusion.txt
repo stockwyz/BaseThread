@@ -1,0 +1,6 @@
+ReentrantLock的Condition上调用方法awaitUntil(Date)方法,
+1.线程在等待时间到达前，可以被其他线程提前唤醒
+2.等待时间已到
+3.被其他线程调用notify或notifyAll方法
+上述三种情况无论出现哪一种,从awaitUntil(Date)方法返回前，都要获取同步锁
+

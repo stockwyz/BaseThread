@@ -1,0 +1,3 @@
+x.join(long y),Thread.sleep(long y)的区别在于
+x.join释放x的锁,  Thread.sleep如果有锁的话,不释放锁
+

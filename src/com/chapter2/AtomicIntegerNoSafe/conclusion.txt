@@ -1,0 +1,2 @@
+结论:
+1.AtomicLong类中的addAndGet方法是同步的，但多个线程可以非同步地调用AtomicLong一个实例的addAndGet方法.

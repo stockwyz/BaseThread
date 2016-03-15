@@ -1,0 +1,10 @@
+interrupted与isInterrupted
+1.Thread.interrupted()：测试当前线程是否已经是中断状态，执行后具有将状态标志置清除为false的功能。
+源码是调用当前线程查询其状态
+    public static boolean interrupted() {
+        return currentThread().isInterrupted(true);
+    }
+thread.isInterrupted()：测试线程Thread对象是否已经是中断状态，但不清除状态标志。
+    public boolean isInterrupted() {
+        return isInterrupted(false);
+    }

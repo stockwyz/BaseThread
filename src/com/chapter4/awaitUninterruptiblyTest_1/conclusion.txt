@@ -1,0 +1,1 @@
+ReentrantLock的Condition上调用方法await是可以被thread.interrupt方法唤醒的,被唤醒后也要先获取lock锁,然后抛出interruptedException方法

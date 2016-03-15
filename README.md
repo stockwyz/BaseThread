@@ -1,2 +1,2 @@
 # BaseThread
-java thread base 
+java线程基础知识点
