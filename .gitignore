@@ -1,8 +1,6 @@
 .svn/
 .idea/
 .settings/
-.project
-.classpath
 target/
 out/
 bin/
