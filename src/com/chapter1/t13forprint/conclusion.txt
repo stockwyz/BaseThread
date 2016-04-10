@@ -1,0 +1,5 @@
+在线程实例上调用interrupt()方法, 在线程循环中调用Thread.interrupted方法
+或instance.isInterrupted两个方法为true时退出循环体来停止线程
+退出了循环体，也可以继续执行run方法中循环体外剩余的代码。线程并未真正的结束
+
+其实也可以在Thread.interrupted方法或instance.isInterrupted方法返回true时用return;退出run函数

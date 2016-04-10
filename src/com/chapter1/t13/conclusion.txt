@@ -1,0 +1,2 @@
+在线程实例上调用interrupt()方法, 在线程循环中调用Thread.interrupted方法
+或instance.isInterrupted两个方法为true时退出循环体来停止线程
